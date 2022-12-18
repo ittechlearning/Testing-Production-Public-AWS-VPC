@@ -169,7 +169,7 @@ resource "aws_route_table" "TestProdPublic_Private_Pri_RT" {
   vpc_id = aws_vpc.TestProdPublic_VPC.id
 
   tags = {
-    "Name" = var.name_route_table_P_Pri
+    "Name" = var.name_route_table_Private_Pri
   }
 
 }

@@ -49,7 +49,7 @@ variable "cidr_TestProdPublic_Public_Bckup_us-east-2b" {
 
 }
 
-variable "cidr_TestProdPublic_Private__us-east-2b" {
+variable "cidr_TestProdPublic_Private_Bckup_us-east-2b" {
     type = string
     description = "TestProdPublic Backup Private Subnet"
     default = "192.168.6.0/24"
