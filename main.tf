@@ -270,8 +270,8 @@ resource "aws_route_table_association" "TestProdPublic_Public_Bckup" {
 }
 
 #This will associate the Backup Public subnet to the Backup Private route table
-resource "aws_route_table_association" "TestProdPublic_Public_Bckup" {
-  subnet_id = aws_subnet.TestProdPublic_Public_Bckup_us-east-2b.id
+resource "aws_route_table_association" "TestProdPublic_Private_Bckup" {
+  subnet_id = aws_subnet.TestProdPublic_Private_Bckup_us-east-2b.id
   route_table_id = aws_route_table.TestProdPublic_Private_Bckup_RT.id
   
 }
