@@ -24,7 +24,7 @@ variable "cidr_TestProdPublic_Public_Pri_us-east-2a" {
 variable "cidr_TestProdPublic_Private_Pri_us-east-2a" {
     type = string
     description = "TestProdPublic Private Subnet"
-    default = "192.168.1.0/24"
+    default = "192.168.2.0/24"
 
 }
 
