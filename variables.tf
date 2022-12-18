@@ -1,7 +1,7 @@
 #-------------------- VPC -------------------------
-variable "cidr_TestProdPublic_VPC01" {
+variable "cidr_TestProdPublic_VPC" {
     type = string
-    description = "CIDR block for TestProdPublic_VPC01"
+    description = "CIDR block for TestProdPublic_VPC"
     default = "192.168.0.0/16"
   
 }
@@ -21,9 +21,9 @@ variable "cidr_TestProdPublic_Public_Pri_us-east-2a" {
 
 }
 
-variable "cidr_TestProdPublic_Public_Pri_us-east-2a" {
+variable "cidr_TestProdPublic_Private_Pri_us-east-2a" {
     type = string
-    description = "TestProdPublic Public Subnet"
+    description = "TestProdPublic Private Subnet"
     default = "192.168.1.0/24"
 
 }
@@ -49,9 +49,9 @@ variable "cidr_TestProdPublic_Public_Bckup_us-east-2b" {
 
 }
 
-variable "cidr_TestProdPublic_Public_Bckup_us-east-2b" {
+variable "cidr_TestProdPublic_Private__us-east-2b" {
     type = string
-    description = "TestProdPublic Backup Public Subnet"
+    description = "TestProdPublic Backup Private Subnet"
     default = "192.168.6.0/24"
 
 }
@@ -88,10 +88,10 @@ variable "default_destination_route_outbound_cidr" {
 #--------------------- Tags -----------------------
 
 # VPC Tags
-variable "name_vpc_01" {
+variable "name_vpc" {
     type = string
-    description = "Name/Tag for TestProdPublic VPC01"
-    default = "TestProdPublic_VPC01"
+    description = "Name/Tag for TestProdPublic VPC"
+    default = "TestProdPublic_VPC"
 
 }
 
@@ -110,10 +110,10 @@ variable "name_subnet_TestProdPublic_Public_Pri" {
 
 }
 
-variable "name_subnet_TestProdPublic_Public_Pri" {
+variable "name_subnet_TestProdPublic_Private_Pri" {
     type = string
     description = "Name/Tag for TestProdPublic_Public Primary Subnet"
-    default = "TestProdPublic_Public_Pri_us-east-2a"
+    default = "TestProdPublic_Private_Pri_us-east-2a"
 
 }
 
@@ -138,10 +138,10 @@ variable "name_subnet_TestProdPublic_Public_Bckup" {
 
 }
 
-variable "name_subnet_TestProdPublic_Public_Bckup" {
+variable "name_subnet_TestProdPublic_Private_Bckup" {
     type = string
     description = "Name/Tag for TestProdPublic_Public Backup Subnet"
-    default = "TestProdPublic_Public_Bckup_us-east-2b"
+    default = "TestProdPublic_Private_Bckup_us-east-2b"
 
 }
 
@@ -154,10 +154,10 @@ variable "name_subnet_TestProdPublic_DMZ_Bckup" {
 
 # VPC Internet Gateway Tags
 
-variable "name_IGW_01" {
+variable "name_IGW" {
     type = string
-    description = "Name/Tag for TestProdPublic_IGW01"
-    default = "TestProdPublic_IGW01"
+    description = "Name/Tag for TestProdPublic_IGW"
+    default = "TestProdPublic_IGW"
   
 }
 
@@ -177,10 +177,10 @@ variable "name_route_table_Public_Pri" {
 
 }
 
-variable "name_route_table_Public_Pri" {
+variable "name_route_table_Private_Pri" {
   type = string
   description = "Name/Tag for Public Primary Route Table"
-  default = "TestProdPublic_Public_Pri_RT"
+  default = "TestProdPublic_Private_Pri_RT"
 
 }
 
@@ -205,10 +205,10 @@ variable "name_route_table_Public_Bckup" {
 
 }
 
-variable "name_route_table_Public_Bckup" {
+variable "name_route_table_Private_Bckup" {
   type = string
   description = "Name/Tag for Public Backup Route Table"
-  default = "TestProdPublic_Public_Bckup_RT"
+  default = "TestProdPublic_Private_Bckup_RT"
 
 }
 
