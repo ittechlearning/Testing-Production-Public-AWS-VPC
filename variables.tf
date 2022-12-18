@@ -154,7 +154,7 @@ variable "name_subnet_TestProdPublic_DMZ_Bckup" {
 
 # VPC Internet Gateway Tags
 
-variable "name_IGWW_01" {
+variable "name_IGW_01" {
     type = string
     description = "Name/Tag for TestProdPublic_IGW01"
     default = "TestProdPublic_IGW01"
