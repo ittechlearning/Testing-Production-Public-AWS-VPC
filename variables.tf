@@ -10,49 +10,49 @@ variable "cidr_TestProdPublic_VPC01" {
 variable "cidr_TestProdPublic_Management_Pri_us-east-2a" {
     type = string
     description = "TestProdPublic Management Subnet"
-    default = "192.168.0.0/14"
+    default = "192.168.0.0/24"
   
 }
 
 variable "cidr_TestProdPublic_Public_Pri_us-east-2a" {
     type = string
     description = "TestProdPublic Public Subnet"
-    default = "192.168.1.0/14"
+    default = "192.168.1.0/24"
 
 }
 
 variable "cidr_TestProdPublic_Public_Pri_us-east-2a" {
     type = string
     description = "TestProdPublic Public Subnet"
-    default = "192.168.1.0/14"
+    default = "192.168.1.0/24"
 
 }
 
 variable "cidr_TestProdPublic_DMZ_Pri_us-east-2a" {
     type = string
     description = "TestProdPublic DMZ Subnet"
-    default = "192.168.3.0/14"  
+    default = "192.168.3.0/24"  
 
 }
 
 variable "cidr_TestProdPublic_Management_Bckup_us-east-2b" {
     type = string
     description = "TestProdPublic Bckup Management Subnet"
-    default = "192.168.4.0/14"
+    default = "192.168.4.0/24"
   
 }
 
 variable "cidr_TestProdPublic_Public_Bckup_us-east-2b" {
     type = string
     description = "TestProdPublic Backup Public Subnet"
-    default = "192.168.5.0/14"
+    default = "192.168.5.0/24"
 
 }
 
 variable "cidr_TestProdPublic_Public_Bckup_us-east-2b" {
     type = string
     description = "TestProdPublic Backup Public Subnet"
-    default = "192.168.6.0/14"
+    default = "192.168.6.0/24"
 
 }
 
@@ -60,7 +60,7 @@ variable "cidr_TestProdPublic_Public_Bckup_us-east-2b" {
 variable "cidr_TestProdPublic_DMZ_Bckup_us-east-2b" {
     type = string
     description = "TestProdPublic Backup DMZ Subnet"
-    default = "192.168.7.0/14"  
+    default = "192.168.7.0/24"  
 
 }
 
