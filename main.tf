@@ -138,7 +138,7 @@ resource "aws_internet_gateway" "TestProd_IGW01" {
   vpc_id = aws_vpc.TestProdPublic_VPC01.id
 
   tags = {
-    "Name" = var.name_IGWW_01
+    "Name" = var.name_IGW_01
   }
 }
 
