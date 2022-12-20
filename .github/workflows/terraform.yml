@@ -21,7 +21,7 @@ jobs:
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v2.0.3
         with:
-          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN_TEST_AWS }}
+          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
       - name: Terraform Format
         id: fmt
