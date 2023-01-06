@@ -3,7 +3,7 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "4.47.0"
+      version = "4.48.0"
     }
   }
 }
@@ -85,10 +85,10 @@ resource "aws_subnet" "TestProdPublic_DMZ_Pri_us-east-2a" {
 }
 
 #This will create the Backup Management Subnet
-resource "aws_subnet" "TestProdPublic_Management_Bckup_us-east-2a" {
+resource "aws_subnet" "TestProdPublic_Management_Bckup_us-east-2b" {
   vpc_id = aws_vpc.TestProdPublic_VPC.id
-  cidr_block = var.cidr_TestProdPublic_Management_Bckup_us-east-2a
-  availability_zone = var.availability_zone_us-east-2a
+  cidr_block = var.cidr_TestProdPublic_Management_Bckup_us-east-2b
+  availability_zone = var.availability_zone_us-east-2b
 
   tags = {
     "Name" = var.name_subnet_TestProdPublic_Management_Bckup
@@ -96,10 +96,10 @@ resource "aws_subnet" "TestProdPublic_Management_Bckup_us-east-2a" {
 }
 
 #This will create the Backup Public Subnet
-resource "aws_subnet" "TestProdPublic_Public_Bckup_us-east-2a" {
+resource "aws_subnet" "TestProdPublic_Public_Bckup_us-east-2b" {
   vpc_id = aws_vpc.TestProdPublic_VPC.id
-  cidr_block = var.cidr_TestProdPublic_Public_Bckup_us-east-2a
-  availability_zone = var.availability_zone_us-east-2a
+  cidr_block = var.cidr_TestProdPublic_Public_Bckup_us-east-2b
+  availability_zone = var.availability_zone_us-east-2b
 
   tags = {
     "Name" = var.name_subnet_TestProdPublic_Public_Bckup
@@ -108,10 +108,10 @@ resource "aws_subnet" "TestProdPublic_Public_Bckup_us-east-2a" {
 }
 
 #This will create the Backup Public Private Subnet
-resource "aws_subnet" "TestProdPublic_Private_Bckup_us-east-2a" {
+resource "aws_subnet" "TestProdPublic_Private_Bckup_us-east-2b" {
   vpc_id = aws_vpc.TestProdPublic_VPC.id
-  cidr_block = var.cidr_TestProdPublic_Private_Bckup_us-east-2a
-  availability_zone = var.availability_zone_us-east-2a
+  cidr_block = var.cidr_TestProdPublic_Private_Bckup_us-east-2b
+  availability_zone = var.availability_zone_us-east-2b
 
   tags = {
     "Name" = var.name_subnet_TestProdPublic_Private_Bckup
@@ -120,10 +120,10 @@ resource "aws_subnet" "TestProdPublic_Private_Bckup_us-east-2a" {
 }
 
 #This will create the Backup DMZ Subnet
-resource "aws_subnet" "TestProdPublic_DMZ_Bckup_us-east-2a" {
+resource "aws_subnet" "TestProdPublic_DMZ_Bckup_us-east-2b" {
   vpc_id = aws_vpc.TestProdPublic_VPC.id
-  cidr_block = var.cidr_TestProdPublic_DMZ_Bckup_us-east-2a
-  availability_zone = var.availability_zone_us-east-2a
+  cidr_block = var.cidr_TestProdPublic_DMZ_Bckup_us-east-2b
+  availability_zone = var.availability_zone_us-east-2b
 
   tags = {
     "Name" = var.name_subnet_TestProdPublic_DMZ_Bckup
@@ -257,28 +257,28 @@ resource "aws_route_table_association" "TestProdPublic_DMZ_Pri" {
 
 #This will associate the Backup Management subnet to the Backup Management route table
 resource "aws_route_table_association" "TestProdPublic_Management_Bckup" {
-  subnet_id = aws_subnet.TestProdPublic_Management_Bckup_us-east-2a.id
+  subnet_id = aws_subnet.TestProdPublic_Management_Bckup_us-east-2b.id
   route_table_id = aws_route_table.TestProdPublic_Management_Bckup_RT.id
   
 }
 
 #This will associate the Backup Public subnet to the Backup Public route table
 resource "aws_route_table_association" "TestProdPublic_Public_Bckup" {
-  subnet_id = aws_subnet.TestProdPublic_Public_Bckup_us-east-2a.id
+  subnet_id = aws_subnet.TestProdPublic_Public_Bckup_us-east-2b.id
   route_table_id = aws_route_table.TestProdPublic_Public_Bckup_RT.id
   
 }
 
 #This will associate the Backup Public subnet to the Backup Private route table
 resource "aws_route_table_association" "TestProdPublic_Private_Bckup" {
-  subnet_id = aws_subnet.TestProdPublic_Private_Bckup_us-east-2a.id
+  subnet_id = aws_subnet.TestProdPublic_Private_Bckup_us-east-2b.id
   route_table_id = aws_route_table.TestProdPublic_Private_Bckup_RT.id
   
 }
 
 #This will associate the Backup DMZ subnet to the Backup DMZ route table
 resource "aws_route_table_association" "TestProdPublic_DMZ_Bckup" {
-  subnet_id = aws_subnet.TestProdPublic_DMZ_Bckup_us-east-2a.id
+  subnet_id = aws_subnet.TestProdPublic_DMZ_Bckup_us-east-2b.id
   route_table_id = aws_route_table.TestProdPublic_DMZ_Bckup_RT.id
 
 }
