@@ -13,7 +13,7 @@ terraform {
     organization = "ittechlearning"
 
     workspaces {
-      name = "Testing-Production-Public_AWS"
+      name = "Testing-Production-Public-AWS-VPC"
     }
   }
 }
